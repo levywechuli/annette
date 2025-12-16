@@ -12,21 +12,23 @@ const LoveMessage = () => {
           {/* Message content */}
           <div className="text-center">
             <h2 className="font-display text-4xl md:text-5xl text-gradient mb-8">
-              A Message For You
+              A Message For You from Levy
             </h2>
 
             <div className="space-y-6 font-body text-lg md:text-xl text-foreground/90 leading-relaxed italic">
               <p>
-                On this special day, I want you to know just how much you mean to me.
+                On this special day, I just want to take a moment to remind you how important you are to me and how grateful 
+                I am to have you in my life. You mean more to me than I always know how to put into words.
               </p>
               <p>
-                Your smile lights up my world, your laughter is my favorite melody,
-                and your love is the greatest gift I've ever received.
+                Every moment we spend together, whether it’s something big or something simple, becomes a memory I hold close. You’re not just my girlfriend; you’re my best friend, 
+                the person I trust the most, and the one I want to share both the good days and the challenging ones with.
               </p>
               <p>
-                Every moment spent with you feels like magic.
-                You're not just my girlfriend – you're my best friend,
-                my confidante, and my greatest adventure.
+                Being with you feels easy, comforting, and genuine — like I can truly be myself around you. Your love, support, and understanding are things I never take for granted.
+              </p>
+              <p>
+                As you celebrate your birthday today, I hope it brings you the happiness, peace, and love . You deserve all the good things life has to offer, and I’m thankful to be by your side as you continue this journey. Happy Birthday — today and always, you are deeply loved.
               </p>
               <p className="text-secondary font-medium">
                 May this birthday bring you all the happiness you deserve,

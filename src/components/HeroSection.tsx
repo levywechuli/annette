@@ -30,7 +30,7 @@ const HeroSection = () => {
           className="font-heading text-4xl md:text-6xl lg:text-7xl text-foreground mb-8 animate-fade-in-up delay-300"
           style={{ opacity: 0, animationFillMode: 'forwards' }}
         >
-          Annette
+          Annette Mwanthi Wechuli 
         </h2>
 
         {/* Decorative line */}
@@ -48,9 +48,9 @@ const HeroSection = () => {
           className="font-body text-xl md:text-2xl text-muted-foreground max-w-xl mx-auto animate-fade-in-up delay-500 italic"
           style={{ opacity: 0, animationFillMode: 'forwards' }}
         >
-          Today we celebrate the most beautiful soul. 
+          Today I celebrate the most beautiful soul i know. 
           <br />
-          You make every moment magical.
+          You make every moment in my life magical.
         </p>
 
         {/* Scroll indicator */}

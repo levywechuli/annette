@@ -7,19 +7,19 @@ import { Music, Heart, Play, Sparkles } from 'lucide-react';
 // Add Annette's favorite YouTube songs here
 const favoriteSongs = [
   {
-    title: "Add Her Favorite Song",
-    artist: "Artist Name",
-    videoId: "dQw4w9WgXcQ", // Replace with actual YouTube video ID
+    title: "Is It a Crime ",
+    artist: "Mariah the Scientist, Kali Uchis",
+    videoId: "PWf8jHWrK5k", // Replace with actual YouTube video ID
   },
   {
-    title: "Another Beautiful Song",
-    artist: "Artist Name",
-    videoId: "dQw4w9WgXcQ", // Replace with actual YouTube video ID
+    title: "Sacrifice",
+    artist: "Mariah the Scientist",
+    videoId: "C3AOynifvJY", // Replace with actual YouTube video ID
   },
   {
-    title: "A Song That Reminds Me of You",
-    artist: "Artist Name",
-    videoId: "dQw4w9WgXcQ", // Replace with actual YouTube video ID
+    title: "Daylight ",
+    artist: "Taylor Swift ",
+    videoId: "u9raS7-NisU", // Replace with actual YouTube video ID
   },
 ];
 
@@ -39,11 +39,10 @@ const Songs = () => {
             <Sparkles className="w-5 h-5 text-primary" />
           </div>
           <h1 className="text-4xl md:text-6xl font-display font-bold text-gradient mb-4 animate-fade-in">
-            Our Playlist
+            Your Playlist
           </h1>
           <p className="text-lg text-foreground/70 max-w-2xl mx-auto italic">
-            Songs that remind me of you, songs that make me think of us, 
-            and songs I know you love 💕
+           A collection of your favorite songs — the ones you love and the ones that feel just like you.💞💕
           </p>
         </div>
 
@@ -114,14 +113,6 @@ const Songs = () => {
                 </div>
               </div>
             ))}
-          </div>
-
-          {/* Add more songs message */}
-          <div className="text-center mt-12 p-8 glass-card rounded-2xl border border-dashed border-primary/30">
-            <Music className="w-12 h-12 text-primary/50 mx-auto mb-4" />
-            <p className="text-muted-foreground font-body">
-              Add more of Annette's favorite songs by updating the videoId in the code!
-            </p>
           </div>
         </div>
       </main>

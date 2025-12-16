@@ -3,14 +3,25 @@ import { Heart, Play } from 'lucide-react';
 import annette1 from '@/assets/annette-1.jpeg';
 import annette2 from '@/assets/annette-2.jpeg';
 import annette3 from '@/assets/annette-3.jpeg';
+import annetteVideo1 from '@/assets/annette-video-1.mp4';
+import annetteVideo3 from '@/assets/annette-video-3.mp4';
+import annette4 from '@/assets/annette-4.jpeg';
+import annetteVideo5 from '@/assets/annette-video-5.mp4';
+import annette5 from '@/assets/annette-5.jpeg';
+import annette6 from '@/assets/annette-6.jpeg';
+
 
 const mediaItems = [
   { type: 'image', src: annette1, alt: "Annette looking stunning" },
-  { type: 'video', src: "https://www.youtube.com/embed/dQw4w9WgXcQ", alt: "Demo Video 1" },
-  { type: 'image', src: annette2, alt: "Annette in nature" },
-  { type: 'video', src: "https://www.youtube.com/embed/3JZ_D3ELwOQ", alt: "Demo Video 2" },
+  { type: 'image', src: annette5, alt: "Annette looking stunning" },
+  { type: 'image', src: annette6, alt: "Annette looking stunning" },
+  { type: 'video', src: annetteVideo1, alt: "Demo Video 1" },
   { type: 'image', src: annette3, alt: "Annette being beautiful" },
-  { type: 'video', src: "https://www.youtube.com/embed/L_jWHffIx5E", alt: "Demo Video 3" },
+  { type: 'video', src: annetteVideo3, alt: "Annette in nature" },
+  { type: 'image', src: annette2, alt: "Annette looking stunning" },
+  { type: 'image', src: annette4, alt: "Annette looking stunning" },
+  { type: 'video', src: annetteVideo5, alt: "Demo Video 1" },
+
 ];
 
 const PhotoGallery = () => {

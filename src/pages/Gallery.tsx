@@ -12,10 +12,10 @@ const Gallery = () => {
       <main className="pt-24 pb-12">
         <div className="container mx-auto px-4 text-center mb-12">
           <h1 className="text-4xl md:text-6xl font-display font-bold text-primary mb-4 animate-fade-in">
-            Our Beautiful Moments
+          Beautiful Moments
           </h1>
           <p className="text-lg text-foreground/70 max-w-2xl mx-auto">
-            Every picture tells a story of love, laughter, and cherished memories we've created together.
+            A collection of moments where love smiled, laughter lived, and you became my favorite memory.
           </p>
         </div>
         
