@@ -1,13 +1,13 @@
 import { NavLink } from "@/components/NavLink";
-import { Heart, Images, Mail, Sparkles, Music } from "lucide-react";
+import { HeartHandshake, GalleryHorizontalEnd, MailOpen, PartyPopper, Music4 } from "lucide-react";
 
 const Navigation = () => {
   const links = [
-    { to: "/", label: "Home", icon: Heart },
-    { to: "/gallery", label: "Gallery", icon: Images },
-    { to: "/love-letter", label: "Love Letter", icon: Mail },
-    { to: "/wishes", label: "Wishes", icon: Sparkles },
-    { to: "/songs", label: "Songs", icon: Music },
+    { to: "/", label: "Home", icon: HeartHandshake },
+    { to: "/gallery", label: "Gallery", icon: GalleryHorizontalEnd },
+    { to: "/love-letter", label: "Love Letter", icon: MailOpen },
+    { to: "/wishes", label: "Wishes", icon: PartyPopper },
+    { to: "/songs", label: "Songs", icon: Music4 },
   ];
 
   return (
@@ -19,10 +19,10 @@ const Navigation = () => {
               key={link.to}
               to={link.to}
               end={link.to === "/"}
-              className="flex items-center gap-2 px-3 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:bg-primary/20 text-foreground/70 hover:text-primary"
-              activeClassName="bg-primary text-primary-foreground shadow-lg shadow-primary/30"
+              className="group flex items-center gap-2 px-4 py-2.5 rounded-full text-sm font-medium transition-all duration-300 hover:bg-primary/20 text-foreground/70 hover:text-primary hover:scale-105"
+              activeClassName="bg-gradient-to-r from-primary to-primary/80 text-primary-foreground shadow-lg shadow-primary/40 scale-105"
             >
-              <link.icon className="w-4 h-4" />
+              <link.icon className="w-5 h-5 text-white stroke-[2.5] transition-transform duration-300 group-hover:rotate-12" />
               <span className="hidden sm:inline">{link.label}</span>
             </NavLink>
           ))}
