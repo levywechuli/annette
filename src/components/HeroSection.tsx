@@ -30,7 +30,7 @@ const HeroSection = () => {
           className="font-heading text-4xl md:text-6xl lg:text-7xl text-foreground mb-8 animate-fade-in-up delay-300"
           style={{ opacity: 0, animationFillMode: 'forwards' }}
         >
-          Annette Mwanthi Wechuli 
+          Annette Mwende Wechuli 
         </h2>
 
         {/* Decorative line */}
