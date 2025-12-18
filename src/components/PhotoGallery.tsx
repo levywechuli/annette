@@ -9,6 +9,10 @@ import annette4 from '@/assets/annette-4.jpeg';
 import annetteVideo5 from '@/assets/annette-video-5.mp4';
 import annette5 from '@/assets/annette-5.jpeg';
 import annette6 from '@/assets/annette-6.jpeg';
+import annette7 from '@/assets/annette-7.jpeg';
+import annette8 from '@/assets/annette-8.jpeg';
+import annetteVideo6 from '@/assets/annette-video-6.mp4';
+import annette9 from '@/assets/annette-9.jpeg';
 
 
 const mediaItems = [
@@ -21,6 +25,10 @@ const mediaItems = [
   { type: 'image', src: annette2, alt: "Annette looking stunning" },
   { type: 'image', src: annette4, alt: "Annette looking stunning" },
   { type: 'video', src: annetteVideo5, alt: "Demo Video 1" },
+  { type: 'image', src: annette7, alt: "Annette looking stunning" },
+  { type: 'image', src: annette8, alt: "Annette looking stunning" },
+  { type: 'video', src: annetteVideo6, alt: "Demo Video 1" },
+  { type: 'image', src: annette9, alt: "Annette looking stunning" },
 
 ];
 
