@@ -18,25 +18,24 @@ import annette11 from '@/assets/annette-11.jpeg';
 import annette12 from '@/assets/annette-12.jpeg';
 import annette13 from '@/assets/annette-13.jpeg';
 
-
 const mediaItems = [
-  { type: 'image', src: annette1, alt: "Annette looking stunning" },
-  { type: 'image', src: annette5, alt: "Annette looking stunning" },
-  { type: 'image', src: annette6, alt: "Annette looking stunning" },
-  { type: 'video', src: annetteVideo1, alt: "Demo Video 1" },
-  { type: 'image', src: annette3, alt: "Annette being beautiful" },
-  { type: 'video', src: annetteVideo3, alt: "Annette in nature" },
-  { type: 'image', src: annette2, alt: "Annette looking stunning" },
-  { type: 'image', src: annette4, alt: "Annette looking stunning" },
-  { type: 'video', src: annetteVideo5, alt: "Demo Video 1" },
-  { type: 'image', src: annette7, alt: "Annette looking stunning" },
-  { type: 'image', src: annette8, alt: "Annette looking stunning" },
-  { type: 'video', src: annetteVideo6, alt: "Demo Video 1" },
-  { type: 'image', src: annette9, alt: "Annette looking stunning" },
-  { type: 'image', src: annette10, alt: "Annette looking stunning" },
-  { type: 'image', src: annette11, alt: "Annette looking stunning" },
-  { type: 'image', src: annette12, alt: "Annette looking stunning" },
-  { type: 'image', src: annette13, alt: "Annette looking stunning" },
+  { type: 'image', src: annette1, alt: 'Annette looking stunning' },
+  { type: 'image', src: annette5, alt: 'Annette looking stunning' },
+  { type: 'image', src: annette6, alt: 'Annette looking stunning' },
+  { type: 'video', src: annetteVideo1, alt: 'Demo Video 1' },
+  { type: 'image', src: annette3, alt: 'Annette being beautiful' },
+  { type: 'video', src: annetteVideo3, alt: 'Annette in nature' },
+  { type: 'image', src: annette2, alt: 'Annette looking stunning' },
+  { type: 'image', src: annette4, alt: 'Annette looking stunning' },
+  { type: 'video', src: annetteVideo5, alt: 'Demo Video 1' },
+  { type: 'image', src: annette7, alt: 'Annette looking stunning' },
+  { type: 'image', src: annette8, alt: 'Annette looking stunning' },
+  { type: 'video', src: annetteVideo6, alt: 'Demo Video 1' },
+  { type: 'image', src: annette9, alt: 'Annette looking stunning' },
+  { type: 'image', src: annette10, alt: 'Annette looking stunning' },
+  { type: 'image', src: annette11, alt: 'Annette looking stunning' },
+  { type: 'image', src: annette12, alt: 'Annette looking stunning' },
+  { type: 'image', src: annette13, alt: 'Annette looking stunning' },
 ];
 
 const PhotoGallery = () => {
@@ -45,47 +44,60 @@ const PhotoGallery = () => {
   return (
     <section className="py-12 px-4">
       <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {mediaItems.map((item, index) => (
-            <div
-              key={index}
-              className="relative group overflow-hidden rounded-2xl shadow-lg hover:shadow-primary/30 transition-all duration-500 hover:scale-[1.02] animate-fade-in"
-              style={{ animationDelay: `${index * 100}ms` }}
-              onMouseEnter={() => setHoveredIndex(index)}
-              onMouseLeave={() => setHoveredIndex(null)}
-            >
-              {item.type === 'image' ? (
-                <>
-                  <img
-                    src={item.src}
-                    alt={item.alt}
-                    className="w-full h-72 object-cover"
-                  />
-                  <div className={`absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent transition-opacity duration-300 flex items-end justify-center pb-6 ${hoveredIndex === index ? 'opacity-100' : 'opacity-0'}`}>
-                    <Heart className="w-8 h-8 text-white fill-white/80 animate-pulse" />
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+          {mediaItems.map((item, index) => {
+            // Portrait images: 10–13 → indexes 13–16
+            const isPortrait = [13,15, 16].includes(index);
+
+            return (
+              <div
+                key={index}
+                className="relative group overflow-hidden rounded-2xl shadow-lg hover:shadow-primary/30 transition-all duration-500 hover:scale-[1.02] animate-fade-in"
+                style={{ animationDelay: `${index * 100}ms` }}
+                onMouseEnter={() => setHoveredIndex(index)}
+                onMouseLeave={() => setHoveredIndex(null)}
+              >
+                {item.type === 'image' ? (
+                  <>
+                    <img
+                      src={item.src}
+                      alt={item.alt}
+                      className={`w-full h-72 ${
+                        isPortrait
+                          ? 'object-contain'
+                          : 'object-cover'
+                      }`}
+                    />
+
+                    <div
+                      className={`absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent transition-opacity duration-300 flex items-end justify-center pb-6 ${
+                        hoveredIndex === index ? 'opacity-100' : 'opacity-0'
+                      }`}
+                    >
+                      <Heart className="w-8 h-8 text-white fill-white/80 animate-pulse" />
+                    </div>
+                  </>
+                ) : (
+                  <div className="relative w-full h-72 bg-card">
+                    <video
+                      src={item.src}
+                      className="w-full h-full object-cover"
+                      controls
+                    />
+                    <div className="absolute top-3 right-3 bg-primary/80 p-2 rounded-full">
+                      <Play className="w-4 h-4 text-white fill-white" />
+                    </div>
                   </div>
-                </>
-              ) : (
-                <div className="relative w-full h-72 bg-card">
-                  <iframe
-                    src={item.src}
-                    title={item.alt}
-                    className="w-full h-full"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  />
-                  <div className="absolute top-3 right-3 bg-primary/80 p-2 rounded-full">
-                    <Play className="w-4 h-4 text-white fill-white" />
-                  </div>
-                </div>
-              )}
-            </div>
-          ))}
+                )}
+              </div>
+            );
+          })}
         </div>
 
-        {/* Center birthday text */}
         <div className="text-center mt-16">
-          <span className="font-display text-2xl md:text-3xl text-gold tracking-wider">HAPPY</span>
+          <span className="font-display text-2xl md:text-3xl text-gold tracking-wider">
+            HAPPY
+          </span>
           <h2 className="font-display text-5xl md:text-7xl text-gradient italic -mt-2">
             birthday
           </h2>
