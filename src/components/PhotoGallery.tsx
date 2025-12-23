@@ -44,7 +44,17 @@ const PhotoGallery = () => {
   return (
     <section className="py-12 px-4">
       <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+        <div className="    grid
+    grid-cols-2
+    sm:grid-cols-2
+    md:grid-cols-3
+    lg:grid-cols-4
+    xl:grid-cols-5
+    gap-4
+    auto-rows-[140px]
+    sm:auto-rows-[160px]
+    md:auto-rows-[180px]
+    lg:auto-rows-[200px]">
           {mediaItems.map((item, index) => {
             // Portrait images: 10–13 → indexes 13–16
             const isPortrait = [13,15, 16].includes(index);
